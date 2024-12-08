@@ -6,13 +6,16 @@ import Project from "./Project/page";
 import Page from "./Page/page";
 
 export default function Home() {
+
   return (
+    
     <div>
       <Hero />
       <Shop />
       <About />
       <Project />
       <Page />
+      
     </div>
   );
 }
