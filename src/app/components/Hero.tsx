@@ -1,69 +1,46 @@
 import React from "react";
 import Image from "next/image";
 
-import { IoIosArrowRoundForward } from "react-icons/io";
-
-export default function Hero() {
+const Hero = () => {
   return (
-    
-    <div className="w-[1740px] h-[850px] bg-[#F0F2F3]">
-      <div className=" w-[557px] h-[337px] px-[70px] py-[220px]">
-        <div className="font-inter font-normal size-14 text-[#272343]">
-          <h1 className=" text-nowrap font-semibold"> Welcome to chairy</h1>
+    <div className="flex justify-center items-center">
+      <div className="w-full max-w-screen-xl h-auto bg-[#F0F2F3] flex flex-col sm:flex-row justify-between items-center px-6 sm:px-10 lg:px-16 py-6">
+        <div className="flex flex-col justify-center items-center sm:items-start w-full sm:w-1/2 space-y-4 sm:space-y-6">
+          <h1 className="text-[14px] pt-[50px] sm:pt-[119px] font-normal text-[#272343] text-center sm:text-left">
+            WELCOME TO CHAIRY
+          </h1>
+          <p className="w-full sm:w-[557px] text-[40px] sm:text-[60px] font-bold text-center sm:text-left mb-6">
+            Best Furniture Collection for your interior.
+          </p>
+          <button className="bg-[#029FAE] w-[171px] text-white py-3 px-6 rounded-[8px] flex items-center gap-[20px] hover:bg-blue-700 mx-auto sm:mx-0">
+            <span>Shop Now</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 12h18M15 18l6-6-6-6"
+              />
+            </svg>
+          </button>
         </div>
-        <div className="absolute w-[557px] h-[198px] left-[70px] top-[267px] font-inter font-bold text-[60px] leading-[66px] capitalize text-[#272343]">
-          <p> Best Furniture Collection for your interior.</p>
+        <div className="w-full sm:w-1/2 mt-6 sm:mt-0 sm:ml-[130px] flex justify-center">
+          <Image
+            src="/Product Image.png"
+            alt="Product Image"
+            width={434}
+            height={584}
+          />
         </div>
-        <button
-          className="absolute flex flex-row justify-center items-center p-[14px_24px] gap-[20px] 
-         w-[171px] h-[52px] left-[70px] top-[514px] bg-[#029FAE] rounded-[8px] text-[#FFFF]"
-        >
-          Shop Now <IoIosArrowRoundForward />
-
-        </button>
-
-        <div className="absolute w-[1740px] h-[850px] left-[777px] top-[115px] bg-[#F0F2F3] bg-cover ">
-          <Image src="/product.png" width={434} height={585} alt="product" />
-        </div>
-        
-        <div className="absolute flex flex-row justify-between items-center p-0 gap-[106px] w-[1321px] h-[139px] left-[300px] top-[1107px]">
-
-
-        <Image src="/Logo.png" width={85} height={87} alt="logo" />
-        <Image src="/Logo1.png" width={107} height={109} alt="logo1" />
-        <Image src="/Logo2.png" width={135} height={130} alt="logo2" />
-        <Image src="/Logo3.png" width={63} height={65} alt="logo3" />
-        <Image src="/Logo4.png" width={85} height={87} alt="logo4" />
-        <Image src="/Logo5.png" width={98} height={101} alt="logo5" />
-        <Image src="/Logo6.png" width={85} height={87} alt="logo6" />
-        <Image src="/Logo7.png" width={113} height={115} alt="logo7" />
-
-        </div>
-        <div>
-        <div
-  className="absolute flex flex-row justify-between items-center px-[300px] gap-[846px] w-[1920px] h-[44px] left-0 top-0">
-    <div
-  className="mx-auto w-[286px] h-[35px] font-inter text-[32px] leading-[110%] capitalize text-[#272343] flex-none order-0 flex-grow-0">
-  Featured Products
-</div>
-<div>
-<div className="absolute inset-x-0 top-0 bottom-[17.24%] bg-/image.png rounded-[6px]">
-</div>   
-            <Image src="/image.png"alt="image" width={312}height={312}/>
-            <br/>            
-          <h1>$20</h1> 
-          <Image src="/image.png"alt="image" width={312}height={312}/>
-            <br/>            
-          <h1>$20</h1>  
-        </div>
-
-
-</div>
-
-        </div>
-
       </div>
     </div>
-
   );
-}
+};
+
+export default Hero;

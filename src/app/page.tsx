@@ -1,21 +1,19 @@
-import React from "react";
+
+import Catagories from "./components/Catagories";
+import CompanyLogo from "./components/companyLogo";
+
 import Hero from "./components/Hero";
-import About from "./About/page";
-import Shop from "./Shop/page";
-import Project from "./Project/page";
-import Page from "./Page/page";
+import OurProducts from "./components/ourProducts";
+import HotProduct from "./components/hotProducts";
 
 export default function Home() {
-
   return (
-    
-    <div>
+    <>
       <Hero />
-      <Shop />
-      <About />
-      <Project />
-      <Page />
-      
-    </div>
+      <CompanyLogo />
+      <Catagories />
+      <HotProduct />
+      <OurProducts />
+    </>
   );
 }
