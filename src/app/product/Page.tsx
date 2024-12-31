@@ -1,13 +1,14 @@
 import React from 'react'
-import NewsletterInstagram from '../components/Instagram'
-import AllProduct from '../components/allProducts'
+import NewsletterInstagram from '../../components/Instagram'
+import AllProducts from '../../components/AllProducts'
 
 const page = () => {
   return (
       <div>
           
-          <AllProduct />
+          <AllProducts />
           <NewsletterInstagram />
+      
       
     </div>
   )

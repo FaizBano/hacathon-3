@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 const AboutPopularProduct = () => {
   return (
     <div className="max-w-screen-xl mx-auto mt-32 px-6">
@@ -10,7 +9,7 @@ const AboutPopularProduct = () => {
       <div className="flex flex-col sm:flex-row lg:flex-row justify-between gap-8">
         <div className="text-center">
           <Image
-            src="/1.jpg"
+            src="/pop3.png"
             alt="1"
             width={590}
             height={375}
@@ -21,7 +20,7 @@ const AboutPopularProduct = () => {
         </div>
         <div className="text-center">
           <Image
-            src="/2.jpg"
+            src="/pop1.png"
             alt="2"
             width={305}
             height={375}
@@ -32,7 +31,7 @@ const AboutPopularProduct = () => {
         </div>
         <div className="text-center">
           <Image
-            src="/3.jpg"
+            src="/pop.png"
             alt="3"
             width={305}
             height={375}
@@ -42,6 +41,7 @@ const AboutPopularProduct = () => {
           <p className="pt-2 text-[18px] font-normal mb-32 text-left ">$99.00</p>
         </div>
       </div>
+  
     </div>
   );
 };

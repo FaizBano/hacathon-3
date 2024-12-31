@@ -20,7 +20,7 @@ const Navbar = () => {
           <Link href="/product" className="text-[14px] font-medium">
             Shop
           </Link>
-          <Link href="/product" className="text-[14px] font-medium">
+          <Link href="/singleProduct" className="text-[14px] font-medium">
             Product
           </Link>
           <Link href="/faq" className="text-[14px] font-medium">
@@ -68,10 +68,10 @@ const Navbar = () => {
             Home
           </Link>
           <Link href="/product" className="text-[14px] font-medium">
-            Shop
+          Shop
           </Link>
-          <Link href="/product" className="text-[14px] font-medium">
-            Product
+          <Link href="/singleProduct" className="text-[14px] font-medium">
+          Product
           </Link>
           <Link href="/faq" className="text-[14px] font-medium">
             Pages

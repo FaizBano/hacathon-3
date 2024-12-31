@@ -1,7 +1,8 @@
 import { ShoppingCart } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "./ui/badge"
 import Image from "next/image";
 import Link from "next/link";
+
 interface Product {
   id: number;
   title: string;
@@ -18,7 +19,7 @@ export default function OurProduct() {
       id: 1,
       title: "Library Stool Chair",
       price: 20,
-      image: "/01.jpg",
+      image: "/image.png",
       isNew: true,
     },
     {
@@ -26,26 +27,26 @@ export default function OurProduct() {
       title: "Library Stool Chair",
       price: 20,
       originalPrice: 30,
-      image: "/02.jpg",
+      image: "/image1.png",
       isSale: true,
     },
     {
       id: 3,
       title: "Library Stool Chair",
       price: 20,
-      image: "/03.jpg",
+      image: "/image2.png",
     },
     {
       id: 4,
       title: "Library Stool Chair",
       price: 20,
-      image: "/04.jpg",
+      image: "/image3.png",
     },
     {
       id: 5,
       title: "Library Stool Chair",
       price: 20,
-      image: "/05.jpg",
+      image: "/p1.png",
       isNew: true,
     },
     {
@@ -53,26 +54,26 @@ export default function OurProduct() {
       title: "Library Stool Chair",
       price: 20,
       originalPrice: 30,
-      image: "/06.jpg",
+      image: "/p2.png",
       isSale: true,
     },
     {
       id: 7,
       title: "Library Stool Chair",
       price: 20,
-      image: "/07.jpg",
+      image: "/pp.png",
     },
     {
       id: 8,
       title: "Library Stool Chair",
       price: 20,
-      image: "/01.jpg",
+      image: "/image.png",
     },
   ];
 
   return (
     <div className="container mx-auto px-4 py-20">
-      <h1 className="text-3xl text-center font-semibold text-[#1C1B1F] tracking-tight  mb-8">
+      <h1 className="text-3xl text-start font-semibold text-[#1C1B1F] tracking-tight  mb-8">
         {" "}
         Our Products
       </h1>
@@ -123,6 +124,7 @@ export default function OurProduct() {
           </div>
         ))}
       </div>
+     
     </div>
   );
 }

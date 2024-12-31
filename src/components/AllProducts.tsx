@@ -1,5 +1,5 @@
 import { ShoppingCart } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import {Badge} from"@/components/ui/badge"
 import Image from "next/image";
 import Link from "next/link";
 
@@ -67,7 +67,7 @@ export default function AllProduct() {
       id: 1,
       title: "Library Stool Chair",
       price: 20,
-      image: "/01.jpg",
+      image: "/image.png",
       isNew: true,
     },
     {
@@ -75,16 +75,26 @@ export default function AllProduct() {
       title: "Library Stool Chair",
       price: 20,
       originalPrice: 30,
-      image: "/02.jpg",
+      image: "/image1.png",
       isSale: true,
     },
-    { id: 3, title: "Library Stool Chair", price: 20, image: "/03.jpg" },
-    { id: 4, title: "Library Stool Chair", price: 20, image: "/04.jpg" },
+    {
+      id: 3,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/image2.png",
+    },
+    {
+      id: 4,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/image3.png",
+    },
     {
       id: 5,
       title: "Library Stool Chair",
       price: 20,
-      image: "/05.jpg",
+      image: "/p1.png",
       isNew: true,
     },
     {
@@ -92,22 +102,59 @@ export default function AllProduct() {
       title: "Library Stool Chair",
       price: 20,
       originalPrice: 30,
-      image: "/06.jpg",
+      image: "/p2.png",
       isSale: true,
     },
-    { id: 7, title: "Library Stool Chair", price: 20, image: "/07.jpg" },
-    { id: 8, title: "Library Stool Chair", price: 20, image: "/01.jpg" },
+    {
+      id: 7,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/pp.png",
+    },
+    {
+      id: 8,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/image.png",
+    },
+    {
+      id: 9,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/p1.png",
+    },
+    {
+      id: 10,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/image1.png",
+    },
+    {
+      id: 11,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/image2.png",
+    },
+    {
+      id: 12,
+      title: "Library Stool Chair",
+      price: 20,
+      image: "/p3.png",
+    },
   ];
+   
 
   return (
+    <div className="text-gray-800"> Product Page
     <div className="container mx-auto px-4 py-20">
-      <h1 className="text-3xl text-center font-semibold text-[#1C1B1F] tracking-tight mb-8">
-        Our Products
+      <h1 className="mb-10 mx-5 text-3xl text-start font-semibold text-[#1C1B1F] tracking-tight ">
+        All Products
       </h1>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+      </div>
       </div>
     </div>
   );

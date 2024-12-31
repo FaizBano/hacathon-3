@@ -2,13 +2,13 @@ import React from "react";
 import { Poppins } from "next/font/google";
 import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { GoClockFill } from "react-icons/go";
-import ContactSection from "../components/contactSection";
+import ContactSection from "../../components/contactSection";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600"] });
 
 const Page = () => {
   return (
-    <div className="max-w-screen-xl mx-auto mt-24 px-4 sm:px-6">
+    <div className="max-w-screen-xl mx-auto mt-24 px-4 sm:px-6 text-gray-800">Contect Us
       <h1 className="font-semibold text-4xl text-center sm:text-3xl">
         Get In Touch With Us
       </h1>
