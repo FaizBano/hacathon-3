@@ -9,15 +9,15 @@ import Faq from "@/app/faq/page";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center place-items-center ">
+    <div className=" justify-center place-items-center ">
           <div className="container mx-auto p-4 sm:p-6 lg:p-8">
       {/* HomePage Title */}
-      <h6 className=" sm:text-3xl lg:text-4xl mb-6 sm:mb-8">
+      <h6 className=" lg:text-4xl mb-6 sm:mb-8">
         HomePage
       </h6>
 
       {/* Main Content */}
-      <div className="flex flex-col gap-8 sm:gap-10 lg:gap-12">
+      <div className="flex  gap-8 md:gap-20  sm:gap-10 lg:gap-12">
         {/* Hero Section */}
         <section className="w-full">
           <Hero />
