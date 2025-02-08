@@ -1,11 +1,12 @@
+
 "use client";
+
 import Hero from "@/app/hero/page";
-import Product from "@/app/product/page";
-import Contacts from "@/app/contacts/page";
-import Cart from "@/app/cart/page";
-import AboutusComforty from "@/app/about/page";
-import SingleProduct from "./singleProduct/page";
-import Faq from "@/app/faq/page";
+
+import Chair from "@/app/chair/page";
+import Cart from "@/components/cart"
+
+
 
 export default function Home() {
   return (
@@ -19,38 +20,20 @@ export default function Home() {
         {/* Hero Section */}
         <section className="w-full">
           <Hero />
-        </section>
-
-        {/* Product Section */}
-        <section className="w-full">
-          <Product />
-        </section>
-
-        {/* Single Product Section */}
-        <section className="w-full">
-          <SingleProduct />
-        </section>
-
-        {/* Cart Section */}
-        <section className="w-full">
+          <Chair />
+          
           <Cart />
+          
         </section>
 
-        {/* FAQ Section */}
-        <section className="w-full">
-          <Faq />
-        </section>
+        
+        
+        
+        
+        
 
-        {/* Contacts Section */}
-        <section className="w-full">
-          <Contacts />
-        </section>
-
-        {/* About Us Section */}
-        <section className="w-full">
-          <AboutusComforty />
-        </section>
       </div>
+      
     </div>
     </div>
 

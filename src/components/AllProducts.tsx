@@ -2,6 +2,39 @@ import { ShoppingCart } from "lucide-react";
 import {Badge} from"@/components/ui/badge"
 import Image from "next/image";
 import Link from "next/link";
+import { createClient } from "next-sanity";
+
+const client = createClient({
+  projectId: "86wy6siq", // Replace with your Sanity project ID
+  dataset: "production", // Replace with your dataset name
+  apiVersion: "2025-01-27", // Use the correct API version
+  useCdn: true,
+});
+async function fetchAllProducts() {
+  const query = `*[_type == "products" && "featured" && "AllProducts" in tags]{
+    title,
+    price,
+    priceWithoutDiscount,
+    badge,
+    "imageUrl": image.asset->url,
+    category->{
+      name
+    },
+    description,
+    inventory,
+    tags
+  }`;
+
+  const featuredProducts = await client.fetch(query);
+  return featuredProducts;
+}
+
+fetchAllProducts()
+  .then((products) => console.log("Featured Products:", products))
+  .catch((error) => console.error("Error fetching featured products:", error));
+
+
+
 
 type Product = {
   id: number;
@@ -26,7 +59,7 @@ const ProductCard = ({ product }: { product: Product }) => (
           Sale
         </Badge>
       )}
-      <Link href={`/product/${product.id}`}>
+      <Link href={`/product/products/${product.id}`}>
         <Image
           src={product.image}
           alt={product.title}

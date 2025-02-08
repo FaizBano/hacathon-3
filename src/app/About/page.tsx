@@ -1,24 +1,28 @@
-import React from 'react'
+import React from "react";
 
-import AboutSection from '../../components/aboutSections';
-import AboutPopularProduct from '../../components/aboutPopularProducts';
-import AboutusComforty from '@/components/Aboutus-conforty';
+import AboutSection from "../../components/aboutSections";
+import AboutPopularProduct from "../../components/aboutPopularProducts";
+import AboutusComforty from "@/components/Aboutus-conforty";
 
-
-
-const page = () => {
-    return (
-      <div>
-      
+const Page = () => {
+  return (
+    <div className="container mx-auto px-4">
+      {/* About Us Section */}
+      <section className="py-8">
         <AboutusComforty />
-            <AboutSection />
-            <AboutPopularProduct />
-           
-            
-            
-            
-      </div>
-    );
-}
+      </section>
 
-export default page
+      {/* About Section */}
+      <section className="py-8">
+        <AboutSection />
+      </section>
+
+      {/* Popular Products Section */}
+      <section className="py-8">
+        <AboutPopularProduct />
+      </section>
+    </div>
+  );
+};
+
+export default Page;

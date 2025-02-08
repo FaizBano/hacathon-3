@@ -1,5 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
+import { createClient } from "next-sanity";
+
+const client = createClient({
+  projectId: "86wy6siq", // Replace with your Sanity project ID
+  dataset: "production", // Replace with your dataset name
+  apiVersion: "2025-01-27", // Use the correct API version
+  useCdn: true,
+});
+async function fetchCategories() {
+  const query = `*[_type == "products" && "featured" && "AllProducts" && "Categories" in tags]{
+    title,
+    price,
+    priceWithoutDiscount,
+    badge,
+    "imageUrl": image.asset->url,
+    category->{
+      name
+    },
+    description,
+    inventory,
+    tags
+  }`;
+
+  const Categories = await client.fetch(query);
+  return Categories;
+}
+
+fetchCategories()
+  .then((products) => console.log("Popular Products:", products))
+  .catch((error) => console.error("Error fetching featured products:", error));
+
 
 export default function Categories() {
   const categories = [
